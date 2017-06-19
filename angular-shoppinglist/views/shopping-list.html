@@ -1,3 +1,4 @@
+<!-- Create a new object called newItem: -->
 <form ng-submit='addItem(newItem)' name="list">
 	<label>Item</label>
 	<input type="text" placeholder="Item" ng-model="newItem.name">
@@ -10,7 +11,7 @@
 	</select>
 	<button type="submit">Add</button>
 </form>
-<!-- After user clicks the submit button, the user's input will be here: -->
+<!-- After user clicks the submit button, the user's input will be printed here: -->
 <p>{{list}}</p>
 <!-- Concept: two-way binding - opening a convo btwn 2 elements -->
 
@@ -21,9 +22,38 @@
 <div class="card">
 	<div class="card-block">
 		<ul>
+			<!-- Show our list of items: -->
 			<li ng-repeat="item in items | orderBy: order">
-				
+				qty: {{item.qty}} -
+				{{item.name}} -
+				priority: {{item.priority}}
+				<button id="remove" ng-click="removeItem(item)"><b>X</b></button>
 			</li>
 		</ul>
 	</div>
 </div>
+
+<button ng-click="removeAll()">Remove All</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
