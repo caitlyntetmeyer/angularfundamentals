@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Use an Angular directive: ng-app="myApp". 
+It says, "Hey, this is an Angular application. -->
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Shopping List Application</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+
+		<!-- Nav Bar -->
+		<nav>
+			<ul>
+				<li><a href="#/home">Home</a></li>
+				<li><a href="#/shopping-list">Shopping List</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<!-- ng-view is a placeholder for what goes in your homepage HTML and your shopping-list HTML. -->
+		<main ng-view>
+			<!-- Stuff will go here -->
+		</main>
+
+		<!-- Angular.js -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+
+    	<!-- Connect the .js files -->
+    	<script src="shopping-config.js"></script>
+    	<script src="shopping-controller.js"></script>
+    	<script src="shopping-service.js"></script>
+    	<script src="home-controller.js"></script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
