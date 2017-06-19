@@ -1,0 +1,12 @@
+<form ng-submit='addItem(newItem)' name="list">
+	<label>Item</label>
+	<input type="text" placeholder="Item" ng-model="newItem.name">
+	<label >Quantity</label>
+	<input type="text" placeholder="Qty" ng-model="newItem.qty">
+	<label>Priority</label>
+	<select ng-model="newItem.priority">
+		<option>Low</option>
+		<option>High</option>
+	</select>
+	<button type="submit">Add</button>
+</form>
