@@ -10,3 +10,20 @@
 	</select>
 	<button type="submit">Add</button>
 </form>
+<!-- After user clicks the submit button, the user's input will be here: -->
+<p>{{list}}</p>
+<!-- Concept: two-way binding - opening a convo btwn 2 elements -->
+
+<h3>Shopping List</h3>
+<button ng-click="order = 'qty'">Order by Quantity</button>
+<button ng-click="order = 'name'">Order by Name</button>
+<button ng-click="order = 'priority'">Order by Priority</button>
+<div class="card">
+	<div class="card-block">
+		<ul>
+			<li ng-repeat="item in items | orderBy: order">
+				
+			</li>
+		</ul>
+	</div>
+</div>
