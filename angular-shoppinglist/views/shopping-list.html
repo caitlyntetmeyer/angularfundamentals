@@ -1,6 +1,13 @@
+<!-- ng-submit - binds onsubmit events to Angular.js 
+<button ng-submit=”enterName(name)”>Submit Name</button>
+ -->
 <!-- Create a new object called newItem: -->
 <form ng-submit='addItem(newItem)' name="list">
 	<label>Item</label>
+	<!-- ng-model - binds form element value to the property and is a 2-way data binding directive.
+This can be used with input types of checkboxes and radio buttons as well.
+<input ng-model=”product.name” />
+ -->
 	<input type="text" placeholder="Item" ng-model="newItem.name">
 	<label >Quantity</label>
 	<input type="text" placeholder="Qty" ng-model="newItem.qty">
@@ -27,6 +34,7 @@
 				qty: {{item.qty}} -
 				{{item.name}} -
 				priority: {{item.priority}}
+				<!-- The ngClick directive allows you to specify custom behavior when an element is clicked. -->
 				<button id="remove" ng-click="removeItem(item)"><b>X</b></button>
 			</li>
 		</ul>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!-- Use an Angular directive: ng-app="myApp". 
-It says, "Hey, this is an Angular application. -->
+It says, "Hey, this is an Angular application." -->
+<!-- ng-app - attach/connect the Angular.js app module to the html (view layer)
+<html ng-app=”<appmodulename>”>
+ -->
 <html ng-app="myApp">
 	<head>
 		<meta charset="utf-8">
@@ -19,6 +22,7 @@ It says, "Hey, this is an Angular application. -->
 
 		<!-- Main -->
 		<!-- ng-view is a placeholder for what goes in your homepage HTML and your shopping-list HTML. -->
+		<!-- ng-view - injects the view partials created by developers when ngRoute is included in the application -->
 		<main ng-view>
 			<!-- Stuff will go here from views/home.html and views/shopping-list.html. -->
 		</main>
