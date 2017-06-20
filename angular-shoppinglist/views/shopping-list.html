@@ -1,40 +1,29 @@
-<!-- ng-submit - binds onsubmit events to Angular.js 
-<button ng-submit=”enterName(name)”>Submit Name</button>
- -->
-<!-- Create a new object called newItem: -->
-<form ng-submit='addItem(newItem)' name="list">
+<form ng-submit='addItem(newItem)'>
 	<label>Item</label>
-	<!-- ng-model - binds form element value to the property and is a 2-way data binding directive.
-This can be used with input types of checkboxes and radio buttons as well.
-<input ng-model=”product.name” />
- -->
-	<input type="text" placeholder="Item" ng-model="newItem.name">
-	<label >Quantity</label>
-	<input type="text" placeholder="Qty" ng-model="newItem.qty">
+	<input 	type="text" placeholder="Item" ng-model="newItem.name">
+	<label>Quantity</label>
+	<input 	type="number" placeholder="Qty" ng-model="newItem.qty">
 	<label>Priority</label>
 	<select ng-model="newItem.priority">
-		<option>Low</option>
-		<option>High</option>
+		<option>low</option>
+		<option>high</option>
 	</select>
+
 	<button type="submit">Add</button>
 </form>
-<!-- After user clicks the submit button, the user's input will be printed here: -->
 <p>{{list}}</p>
-<!-- Concept: two-way binding - opening a convo btwn 2 elements -->
-
 <h3>Shopping List</h3>
-<button ng-click="order = 'qty'">Order by Quantity</button>
-<button ng-click="order = 'name'">Order by Name</button>
-<button ng-click="order = 'priority'">Order by Priority</button>
+<button ng-click="order = 'qty' ">Order by Quantity</button>
+<button ng-click="order = 'name' ">Order by Name</button>
+<button ng-click="order = 'priority' ">Order by Priority</button>
+	
 <div class="card">
 	<div class="card-block">
 		<ul>
-			<!-- Show our list of items: -->
 			<li ng-repeat="item in items | orderBy: order">
 				qty: {{item.qty}} -
 				{{item.name}} -
 				priority: {{item.priority}}
-				<!-- The ngClick directive allows you to specify custom behavior when an element is clicked. -->
 				<button id="remove" ng-click="removeItem(item)"><b>X</b></button>
 			</li>
 		</ul>
@@ -42,26 +31,3 @@ This can be used with input types of checkboxes and radio buttons as well.
 </div>
 
 <button ng-click="removeAll()">Remove All</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

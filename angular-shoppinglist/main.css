@@ -24,6 +24,8 @@ nav li a:hover {
 	background-color: #111;
 }
 
+/* INPUT */
+
 li {
 	/* Remove default styles for lists: */
 	list-style: none;
@@ -41,6 +43,7 @@ button {
 }
 
 button:hover {
+	/* Keep cursor as a pointer? */
 	cursor: pointer;
 }
 

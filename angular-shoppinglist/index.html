@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <!-- Use an Angular directive: ng-app="myApp". 
-It says, "Hey, this is an Angular application." -->
-<!-- ng-app - attach/connect the Angular.js app module to the html (view layer)
+It says, "Hey, this is an Angular application."
+
+ng-app - attach/connect the Angular.js app module to the html (view layer)
 <html ng-app=”<appmodulename>”>
  -->
-<html ng-app="myApp">
+<html lang="en" ng-app="myApp">
 	<head>
 		<meta charset="utf-8">
 		<title>Shopping List Application</title>
@@ -21,10 +22,15 @@ It says, "Hey, this is an Angular application." -->
 		</nav>
 
 		<!-- Main -->
-		<!-- ng-view is a placeholder for what goes in your homepage HTML and your shopping-list HTML. -->
-		<!-- ng-view - injects the view partials created by developers when ngRoute is included in the application -->
+		<!-- 
+		ng-view is a placeholder for what goes in your homepage HTML and your shopping-list HTML. Injects the view partials created by developers when ngRoute is included in the application 
+		-->
 		<main ng-view>
-			<!-- Stuff will go here from views/home.html and views/shopping-list.html. -->
+			<!-- 
+			Angular is a framework that allows a developer to create Single Page Applications (SPAs).  This works because inside of index.html the ng-view directive has been added to the <main></main> html element.  Once the angular config file is built, new views can be injected into this portion of index.html.  They will also be affected by the css file built earlier.
+
+			The ng-view directive works with ngRoute. Stuff will go here from views/home.html and views/shopping-list.html. 
+			**Inject** HTML into DOM from other views we create. -->
 		</main>
 
 		<!-- Angular.js -->

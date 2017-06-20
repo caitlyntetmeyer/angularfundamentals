@@ -1,7 +1,9 @@
-// myApp is from index.html.
-// Anything inside of the square brackets is a service that'll be included into
-// our application. ngRoute is a service built into Angular.
+/* 
+myApp is from index.html.
 
+Anything inside of the square brackets is a service that'll be included into
+our application. ngRoute is a service built into Angular.
+*/
 var app = angular.module('myApp', ['ngRoute'])
 // The ngRoute module provides routing and deeplinking services and directives 
 // for AngularJS apps.
@@ -9,8 +11,10 @@ var app = angular.module('myApp', ['ngRoute'])
 	.config(['$routeProvider', function($routeProvider){
 		// $routeProvider is used for configuring routes:
 		$routeProvider
-			// When a user reaches the root page ('/'), they'll be navigated to
-			// home.html.
+			/* 
+			When a user reaches the root page ('/'), they'll be navigated to
+			home.html:
+			*/
 			.when('/', {
 				templateUrl: "views/home.html"
 			}).otherwise({
