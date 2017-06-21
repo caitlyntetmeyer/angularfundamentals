@@ -1,18 +1,23 @@
-<form ng-submit='addItem(newItem)'>
+<form ng-submit="addItem(newItem)" name="list">
+	<!-- User enters their item -->
 	<label>Item</label>
-	<input 	type="text" placeholder="Item" ng-model="newItem.name">
+	<input type="text" placeholder="Item" ng-model="newItem.name">
+	<!-- User enters quantity of their item -->
 	<label>Quantity</label>
-	<input 	type="number" placeholder="Qty" ng-model="newItem.qty">
+	<input type="number" placeholder="Qty" ng-model="newItem.qty">
+	<!-- User SELECTS priority of low or high -->
 	<label>Priority</label>
 	<select ng-model="newItem.priority">
 		<option>low</option>
 		<option>high</option>
 	</select>
-
+	<!-- User hit submit button to add -->
 	<button type="submit">Add</button>
 </form>
+<!-- User then sees their list with the data they entered: -->
 <p>{{list}}</p>
 <h3>Shopping List</h3>
+<!-- User can order their list by qty, name or priority: -->
 <button ng-click="order = 'qty' ">Order by Quantity</button>
 <button ng-click="order = 'name' ">Order by Name</button>
 <button ng-click="order = 'priority' ">Order by Priority</button>
@@ -20,14 +25,24 @@
 <div class="card">
 	<div class="card-block">
 		<ul>
+			<!-- Similar to a "for" loop, where "item" is one item and "items" is the entire array: -->
 			<li ng-repeat="item in items | orderBy: order">
+			<!-- The pipe above indicates a filter. The user can filter according to qty, name, or priority: -->
 				qty: {{item.qty}} -
 				{{item.name}} -
 				priority: {{item.priority}}
+				<!-- User clicks this button to remove an item: -->
 				<button id="remove" ng-click="removeItem(item)"><b>X</b></button>
 			</li>
 		</ul>
 	</div>
 </div>
-
+<!-- User clicks this button to remove all items from their list: -->
 <button ng-click="removeAll()">Remove All</button>
+
+
+
+
+
+
+
