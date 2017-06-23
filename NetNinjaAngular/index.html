@@ -1,0 +1,22 @@
+<!-- THIS WON'T WORK LIKE SHAUN'S BECAUSE HE'S USING AN IN-ATOM SERVER. -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myNinjaApp">
+  <head>
+    <title>TheNetNinja Angular Playlist</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <!-- Link to Angular JS: -->
+    <script src="app/lib/angular.min.js"></script>
+  </head>
+  <body>
+    <header ng-include="'header.html'"></header>
+    <div ng-controller="NinjaController">
+      <input type="text" ng-model="search" />
+      <ul>
+        <li ng-repeat="ninja in ninjas | orderBy: '-name' | filter: search">
+          {{ninja.name}} - {{ninja.rate | currency: '$'}}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
